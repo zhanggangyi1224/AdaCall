@@ -1,0 +1,74 @@
+{
+  "study_id": "adacall_campus",
+  "title": "AdaCall testbed: dining choice under a dorm-targeted canteen subsidy",
+  "research_question": "How much does a canteen subsidy for a few dorms raise the canteen share while canteen and delivery prices rise every month?",
+  "hypothesis": "Subsidised students switch to the canteen; others react only when the rounded share of their archetype moves, so a paired branch pays mostly for targets.",
+  "title_i18n": {},
+  "research_question_i18n": {},
+  "hypothesis_i18n": {},
+  "study_type": "longitudinal",
+  "n_steps": 6,
+  "seed": 42,
+  "time_unit": "month",
+  "step_meaning": "one month of dining choice",
+  "key_attributes": [],
+  "metrics": [
+    "share_canteen",
+    "share_delivery",
+    "share_cook",
+    "mean_satisfaction",
+    "n_subsidised"
+  ],
+  "metric_descriptions": {
+    "share_canteen": "Share of students eating mainly in the canteen",
+    "share_delivery": "Share of students mainly ordering food delivery",
+    "share_cook": "Share of students mainly cooking for themselves",
+    "mean_satisfaction": "Mean self-rated satisfaction with eating this month (0-1)",
+    "n_subsidised": "Students receiving the canteen subsidy this month"
+  },
+  "display_metrics": [
+    "share_canteen",
+    "share_delivery",
+    "share_cook",
+    "mean_satisfaction"
+  ],
+  "run_note": {},
+  "environment_ref": "environment/environment.json",
+  "population_ref": "population/population.json",
+  "simulation_ref": "simulation/simulation.json",
+  "resources_ref": "resources.json",
+  "domain": "consumer-behavior",
+  "tags": [
+    "dining-choice",
+    "price-response",
+    "subsidy",
+    "counterfactual",
+    "adacall"
+  ],
+  "legacy_simulator": "from_scratch",
+  "provider_refs": [
+    "adacall_cd.env",
+    "adacall_cd.pop",
+    "adacall_cd.decision",
+    "adacall_cd.collector"
+  ],
+  "adjustable_params": [
+    "n_agents",
+    "target dorms",
+    "subsidy_yuan",
+    "cohort_round",
+    "t_star",
+    "llm_kind"
+  ],
+  "status": "draft",
+  "maintainer": "Antarctic penguins",
+  "demonstrates": [
+    "info-broadcast",
+    "branch-replay"
+  ],
+  "teaches": "paired, divergence-triggered LLM calls when a treatment spills over within groups",
+  "reference": false,
+  "requires": null,
+  "rerunnable": true,
+  "created_by": "sv-init"
+}

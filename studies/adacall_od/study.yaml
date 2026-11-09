@@ -1,0 +1,71 @@
+{
+  "study_id": "adacall_od",
+  "title": "AdaCall testbed: opinion diffusion under a targeted campaign",
+  "research_question": "How much does a campaign reaching k% of agents shift mean opinion, and how many LLM calls does a paired treatment branch need to estimate it?",
+  "hypothesis": "Local campaigns in sparse networks have small effects that single runs estimate unstably; pairing the treatment with its control reuses most calls there.",
+  "title_i18n": {},
+  "research_question_i18n": {},
+  "hypothesis_i18n": {},
+  "study_type": "longitudinal",
+  "n_steps": 8,
+  "seed": 42,
+  "time_unit": "abstract",
+  "step_meaning": "one round of opinion updates",
+  "key_attributes": [],
+  "metrics": [
+    "mean_opinion",
+    "opinion_std",
+    "frac_above_0_5",
+    "n_exposed"
+  ],
+  "metric_descriptions": {
+    "mean_opinion": "Mean opinion (0-1, higher = more support for the policy)",
+    "opinion_std": "Population standard deviation of opinions",
+    "frac_above_0_5": "Share of agents with opinion >= 0.5",
+    "n_exposed": "Agents who saw the campaign this step"
+  },
+  "display_metrics": [
+    "mean_opinion",
+    "opinion_std",
+    "frac_above_0_5"
+  ],
+  "run_note": {},
+  "environment_ref": "environment/environment.json",
+  "population_ref": "population/population.json",
+  "simulation_ref": "simulation/simulation.json",
+  "resources_ref": "resources.json",
+  "domain": "opinion-dynamics",
+  "tags": [
+    "opinion-dynamics",
+    "bounded-confidence",
+    "network",
+    "counterfactual",
+    "adacall"
+  ],
+  "legacy_simulator": "from_scratch",
+  "provider_refs": [
+    "adacall.env",
+    "adacall.pop",
+    "adacall.decision",
+    "adacall.collector"
+  ],
+  "adjustable_params": [
+    "n_agents",
+    "topology",
+    "campaign reach",
+    "t_star",
+    "llm_kind"
+  ],
+  "status": "draft",
+  "maintainer": "Antarctic penguins",
+  "demonstrates": [
+    "from-scratch-core",
+    "info-broadcast",
+    "branch-replay"
+  ],
+  "teaches": "paired, divergence-triggered LLM calls between a control run and its treatment branch",
+  "reference": false,
+  "requires": null,
+  "rerunnable": true,
+  "created_by": "sv-init"
+}

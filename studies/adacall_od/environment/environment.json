@@ -1,0 +1,37 @@
+{
+  "study_id": "adacall_od",
+  "layers": [
+    {
+      "name": "peer_opinions",
+      "modality": "physical",
+      "scope": "local",
+      "dynamics": "endogenous",
+      "source": null,
+      "schema_ref": null,
+      "description": "neighbours' current opinions"
+    },
+    {
+      "name": "campaign",
+      "modality": "information",
+      "scope": "local",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "targeted campaign message"
+    }
+  ],
+  "scheduled_events": [],
+  "information_program": {
+    "broadcasts": []
+  },
+  "provider_ref": "adacall.env",
+  "provider_args": {
+    "n_agents": 100,
+    "topology": "small_world",
+    "k": 4,
+    "p": 0.1,
+    "mean_degree": 10,
+    "graph_seed": 7,
+    "init_seed": 12345
+  }
+}

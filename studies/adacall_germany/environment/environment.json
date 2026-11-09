@@ -1,0 +1,78 @@
+{
+  "study_id": "adacall_germany",
+  "layers": [
+    {
+      "name": "market_news",
+      "modality": "information",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "market and policy news"
+    },
+    {
+      "name": "incentive",
+      "modality": "information",
+      "scope": "local",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "EV purchase bonus, by state"
+    },
+    {
+      "name": "ev_climate",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "EV demand climate (real data)"
+    }
+  ],
+  "scheduled_events": [],
+  "information_program": {
+    "broadcasts": [
+      {
+        "message_id": "BYD_ENTRY",
+        "content": "Market news: BYD is speeding up its entry into Germany, expanding its dealer network and launching several good-value models.",
+        "channel": "market_news",
+        "at_step": 0,
+        "ttl": 4,
+        "audience": "all",
+        "note": ""
+      },
+      {
+        "message_id": "TESLA_PRESS",
+        "content": "Public mood: controversy around the Tesla brand is growing and model updates are slowing; some buyers are moving to other electric brands.",
+        "channel": "market_news",
+        "at_step": 0,
+        "ttl": 10,
+        "audience": "all",
+        "note": ""
+      },
+      {
+        "message_id": "EV_RECOVER",
+        "content": "Industry trend: carmakers are launching more affordable electric cars to meet EU CO2 fleet targets, and demand for electric cars is recovering.",
+        "channel": "market_news",
+        "at_step": 2,
+        "ttl": 9,
+        "audience": "all",
+        "note": ""
+      },
+      {
+        "message_id": "BYD_EXPAND",
+        "content": "Market news: BYD sales in Germany are climbing fast, with more showrooms, more models and very competitive prices.",
+        "channel": "market_news",
+        "at_step": 4,
+        "ttl": 7,
+        "audience": "all",
+        "note": ""
+      }
+    ]
+  },
+  "provider_ref": "adacall_de.env",
+  "provider_args": {
+    "n_agents": 100,
+    "month_offset": 12
+  }
+}

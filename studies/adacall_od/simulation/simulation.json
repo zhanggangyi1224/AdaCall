@@ -1,0 +1,16 @@
+{
+  "study_id": "adacall_od",
+  "n_steps": 8,
+  "seed": 42,
+  "warm_start": null,
+  "decision_ref": "adacall.decision",
+  "decision_args": {
+    "llm_kind": "scripted"
+  },
+  "collector_ref": "adacall.collector",
+  "collector_args": {},
+  "interaction_rounds": 1,
+  "engine_args": {},
+  "store_ref": "duckdb",
+  "store_args": {}
+}

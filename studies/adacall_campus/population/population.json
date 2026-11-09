@@ -1,0 +1,15 @@
+{
+  "study_id": "adacall_campus",
+  "personas": [],
+  "interaction": {
+    "kind": "none",
+    "edges": null,
+    "adjacency_ref": null
+  },
+  "propagation": "independent",
+  "provider_ref": "adacall_cd.pop",
+  "provider_args": {
+    "n_agents": 100
+  },
+  "materialized_count": null
+}

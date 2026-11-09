@@ -1,0 +1,251 @@
+{
+  "study_id": "adacall_campus",
+  "layers": [
+    {
+      "name": "canteen_price",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "per-meal price: canteen"
+    },
+    {
+      "name": "delivery_price",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "per-meal price: delivery"
+    },
+    {
+      "name": "cook_price",
+      "modality": "physical",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "per-meal price: cook"
+    },
+    {
+      "name": "news",
+      "modality": "information",
+      "scope": "macro",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "canteen and delivery price news"
+    },
+    {
+      "name": "subsidy",
+      "modality": "physical",
+      "scope": "local",
+      "dynamics": "scheduled",
+      "source": null,
+      "schema_ref": null,
+      "description": "canteen subsidy, by dorm"
+    },
+    {
+      "name": "cohort_trend",
+      "modality": "information",
+      "scope": "local",
+      "dynamics": "endogenous",
+      "source": null,
+      "schema_ref": null,
+      "description": "last month's rounded choice shares of the archetype"
+    }
+  ],
+  "scheduled_events": [
+    {
+      "at_step": 1,
+      "target_layer": "canteen_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.08,
+      "note": "month 1: canteen price x1.08"
+    },
+    {
+      "at_step": 1,
+      "target_layer": "delivery_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.06,
+      "note": "month 1: delivery price x1.06"
+    },
+    {
+      "at_step": 1,
+      "target_layer": "cook_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.02,
+      "note": "month 1: cook price x1.02"
+    },
+    {
+      "at_step": 2,
+      "target_layer": "canteen_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.08,
+      "note": "month 2: canteen price x1.08"
+    },
+    {
+      "at_step": 2,
+      "target_layer": "delivery_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.06,
+      "note": "month 2: delivery price x1.06"
+    },
+    {
+      "at_step": 2,
+      "target_layer": "cook_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.02,
+      "note": "month 2: cook price x1.02"
+    },
+    {
+      "at_step": 3,
+      "target_layer": "canteen_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.08,
+      "note": "month 3: canteen price x1.08"
+    },
+    {
+      "at_step": 3,
+      "target_layer": "delivery_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.06,
+      "note": "month 3: delivery price x1.06"
+    },
+    {
+      "at_step": 3,
+      "target_layer": "cook_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.02,
+      "note": "month 3: cook price x1.02"
+    },
+    {
+      "at_step": 4,
+      "target_layer": "canteen_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.08,
+      "note": "month 4: canteen price x1.08"
+    },
+    {
+      "at_step": 4,
+      "target_layer": "delivery_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.06,
+      "note": "month 4: delivery price x1.06"
+    },
+    {
+      "at_step": 4,
+      "target_layer": "cook_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.02,
+      "note": "month 4: cook price x1.02"
+    },
+    {
+      "at_step": 5,
+      "target_layer": "canteen_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.08,
+      "note": "month 5: canteen price x1.08"
+    },
+    {
+      "at_step": 5,
+      "target_layer": "delivery_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.06,
+      "note": "month 5: delivery price x1.06"
+    },
+    {
+      "at_step": 5,
+      "target_layer": "cook_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.02,
+      "note": "month 5: cook price x1.02"
+    },
+    {
+      "at_step": 6,
+      "target_layer": "canteen_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.08,
+      "note": "month 6: canteen price x1.08"
+    },
+    {
+      "at_step": 6,
+      "target_layer": "delivery_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.06,
+      "note": "month 6: delivery price x1.06"
+    },
+    {
+      "at_step": 6,
+      "target_layer": "cook_price",
+      "op": "multiply",
+      "selector": {},
+      "property_name": "price",
+      "value": 1.02,
+      "note": "month 6: cook price x1.02"
+    }
+  ],
+  "information_program": {
+    "broadcasts": [
+      {
+        "message_id": "CANTEEN_NOTICE",
+        "content": "Campus canteen notice: because of rising costs, canteen prices will go up every month for the next few months (about 8% a month).",
+        "channel": "news",
+        "at_step": 0,
+        "ttl": 7,
+        "audience": "all",
+        "note": ""
+      },
+      {
+        "message_id": "DELIVERY_NEWS",
+        "content": "Local food delivery: platform delivery fees and order prices keep rising (about 6% a month) and discounts are shrinking.",
+        "channel": "news",
+        "at_step": 0,
+        "ttl": 7,
+        "audience": "all",
+        "note": ""
+      }
+    ]
+  },
+  "provider_ref": "adacall_cd.env",
+  "provider_args": {
+    "n_agents": 100,
+    "subsidy_yuan": 4.0,
+    "cohort_round": 0.1
+  }
+}

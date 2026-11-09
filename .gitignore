@@ -1,0 +1,8 @@
+SocioVerse2/
+adacall/runs/
+.env
+.env.*
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
